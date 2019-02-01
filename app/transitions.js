@@ -18,7 +18,10 @@ export default function() {
       },
       {
         pickNew: 'h1',
-        use: ['toDown', {duration: speed}],
+        use: ['toDown', {
+          delay: 0,
+          duration: speed/2,
+        }],
       },
       {
         use: ['fade', {duration: speed/2}], // example on one line
