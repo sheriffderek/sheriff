@@ -1,6 +1,22 @@
 
-<h1>{{page.pageTitle}}</h1>
+<section class='page-section'>
+  <div class='inner-column'>
+    
+    <h1>{{page.pageTitle}}</h1>
 
-<h2>{{{page.pageIntroduction}}}</h2>
+    <h2>{{{page.pageIntroduction}}}</h2>
 
-{{outlet}}
+    <nav class='main-menu'>
+      <ol class='item-list'>
+        {{#each page.links as |link|}}
+          <li class='item'>
+            {{#link-to link.slug}}
+              <span>{{link.name}}</span>
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ol>
+    </nav>
+
+  </div>
+</section>
