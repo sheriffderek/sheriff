@@ -1,23 +1,27 @@
 
-<h1>{{model.pageTitle}}</h1>
+<PageSection>
 
-<h2>{{{model.pageIntroduction}}}</h2>
+  <h1>{{model.pageTitle}}</h1>
 
-<aside class='articles'>
-  <ul class='item-list'>
-    {{#each model.articles as |article|}}
-      <li class='item'>
-        {{#link-to 'design.article' article}}
-          <h2>{{article.title}}</h2>
-        {{/link-to}}
+  <h2>{{{model.pageIntroduction}}}</h2>
 
-        <p>{{article.subheading}}</p>
+  <aside class='articles'>
+    <ul class='item-list'>
+      {{#each model.articles as |article|}}
+        <li class='item'>
+          {{#link-to 'design.article' article}}
+            <h2>{{article.title}}</h2>
+          {{/link-to}}
 
-        {{#link-to 'design.article' article}}
-          <span>Read me!</span>
-        {{/link-to}}
+          <p>{{article.subheading}}</p>
 
-      </li>
-    {{/each}}
-  </ul>
-</aside>
+          {{#link-to 'design.article' article}}
+            <span>Read me!</span>
+          {{/link-to}}
+
+        </li>
+      {{/each}}
+    </ul>
+  </aside>
+
+</PageSection>

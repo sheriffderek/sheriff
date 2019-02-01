@@ -1,42 +1,46 @@
 
-<article>
+<PageSection>
 
-  <h1>{{article.title}}</h1>
+  <article>
 
-  <h2>{{{article.subheading}}}</h2>
+    <h1>{{article.title}}</h1>
 
-  <p>{{article.introduction}}</p>
+    <h2>{{{article.subheading}}}</h2>
 
-  {{#each article.thoughts as |thought|}}
-    <section class='section-name'>
-      <figure>
-        <img src={{thought.image}} alt='$seo-todo' />
-      </figure>
+    <p>{{article.introduction}}</p>
 
-      <h2>{{{thought.heading}}}</h2>
+    {{#each article.thoughts as |thought|}}
+      <section class='section-name'>
+        <figure>
+          <img src={{thought.image}} alt='$seo-todo' />
+        </figure>
 
-      <p>{{{thought.description}}}</p>
-    </section>
-  {{/each}}
+        <h2>{{{thought.heading}}}</h2>
 
-  <h2>Conclusion:</h2>
-
-  <p>{{article.conclusion}}</p>
-
-  <ol class='item-list'>
-    {{#each article.references as |reference|}}
-      <li class='item'>
-        {{#if reference.route}}
-          {{#link-to reference.route}}
-            <span>{{reference.name}}</span>
-          {{/link-to}}
-        {{else}}
-          <a href={{reference.url}} target={{reference.name}}>
-            <span>{{reference.name}}</span>
-          </a>
-        {{/if}}
-      </li>
+        <p>{{{thought.description}}}</p>
+      </section>
     {{/each}}
-  </ol>
 
-</article>
+    <h2>Conclusion:</h2>
+
+    <p>{{article.conclusion}}</p>
+
+    <ol class='item-list'>
+      {{#each article.references as |reference|}}
+        <li class='item'>
+          {{#if reference.route}}
+            {{#link-to reference.route}}
+              <span>{{reference.name}}</span>
+            {{/link-to}}
+          {{else}}
+            <a href={{reference.url}} target={{reference.name}}>
+              <span>{{reference.name}}</span>
+            </a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ol>
+
+  </article>
+
+</PageSection>
