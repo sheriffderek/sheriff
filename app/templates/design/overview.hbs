@@ -4,25 +4,20 @@
 <h2>{{{model.pageIntroduction}}}</h2>
 
 <aside class='articles'>
-	<ul class='item-list'>
-		{{#each model.articles as |article|}}
-			<li class='item'>
-				{{#link-to 'design.article' article}}
+  <ul class='item-list'>
+    {{#each model.articles as |article|}}
+      <li class='item'>
+        {{#link-to 'design.article' article}}
+          <h2>{{article.title}}</h2>
+        {{/link-to}}
 
-{{!-- 					<figure>
-						<img src='https://placehold.it/1600x900' alt='$seo-todo' />
-					</figure> --}}
+        <p>{{article.subheading}}</p>
 
-					<h2>{{article.title}}</h2>
-				{{/link-to}}
+        {{#link-to 'design.article' article}}
+          <span>Read me!</span>
+        {{/link-to}}
 
-				<p>{{article.subheading}}</p>
-
-				{{#link-to 'design.article' article}}
-					<span>Read me!</span>
-				{{/link-to}}
-
-			</li>
-		{{/each}}
-	</ul>
+      </li>
+    {{/each}}
+  </ul>
 </aside>

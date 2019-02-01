@@ -2,13 +2,13 @@
 <h1>{{page.heading}}</h1>
 
 <nav class='main-menu'>
-	<ol class='item-list'>
-		{{#each page.links as |link|}}
-			<li class='item'>
-				{{#link-to link.slug}}
-					<span>{{link.name}}</span>
-				{{/link-to}}
-			</li>
-		{{/each}}
-	</ol>
+  <ol class='item-list'>
+    {{#each page.links as |link|}}
+      <li class='item'>
+        {{#link-to link.slug}}
+          <span>{{link.name}}</span>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ol>
 </nav>
