@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('guidance');
   this.route('design');
   this.route('implementation');
+  this.route('not-found', {path: '/*PATH'});
 });
 
 export default Router;
