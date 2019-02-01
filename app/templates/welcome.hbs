@@ -1,0 +1,14 @@
+
+<h1>{{page.heading}}</h1>
+
+<nav class='main-menu'>
+	<ul class='item-list'>
+		{{#each page.links as |link|}}
+			<li class='item'>
+				{{#link-to link.slug}}
+					<span>{{link.name}}</span>
+				{{/link-to}}
+			</li>
+		{{/each}}
+	</ul>
+</nav>
