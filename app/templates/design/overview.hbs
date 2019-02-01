@@ -1,0 +1,28 @@
+
+<h1>{{model.pageTitle}}</h1>
+
+<h2>{{{model.pageIntroduction}}}</h2>
+
+<aside class='articles'>
+	<ul class='item-list'>
+		{{#each model.articles as |article|}}
+			<li class='item'>
+				{{#link-to 'design.article' article}}
+
+{{!-- 					<figure>
+						<img src='https://placehold.it/1600x900' alt='$seo-todo' />
+					</figure> --}}
+
+					<h2>{{article.title}}</h2>
+				{{/link-to}}
+
+				<p>{{article.subheading}}</p>
+
+				{{#link-to 'design.article' article}}
+					<span>Read me!</span>
+				{{/link-to}}
+
+			</li>
+		{{/each}}
+	</ul>
+</aside>

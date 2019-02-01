@@ -1,0 +1,42 @@
+
+<article>
+
+  <h1>{{article.title}}</h1>
+
+  <h2>{{{article.subheading}}}</h2>
+
+  <p>{{article.introduction}}</p>
+
+  {{#each article.thoughts as |thought|}}
+    <section class='section-name'>
+      <figure>
+        <img src={{thought.image}} alt='$seo-todo' />
+      </figure>
+
+      <h2>{{{thought.heading}}}</h2>
+
+      <p>{{{thought.description}}}</p>
+    </section>
+  {{/each}}
+
+  <h2>Conclusion:</h2>
+
+  <p>{{article.conclusion}}</p>
+
+  <ol class='item-list'>
+    {{#each article.references as |reference|}}
+      <li class='item'>
+        {{#if reference.route}}
+          {{#link-to reference.route}}
+            <span>{{reference.name}}</span>
+          {{/link-to}}
+        {{else}}
+          <a href={{reference.url}} target={{reference.name}}>
+            <span>{{reference.name}}</span>
+          </a>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ol>
+
+</article>

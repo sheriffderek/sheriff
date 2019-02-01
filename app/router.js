@@ -11,7 +11,10 @@ Router.map(function() {
   this.route('welcome');
   this.route('contact');
   this.route('guidance');
-  this.route('design');
+  this.route('design', function() {
+    this.route('overview', {path: '/'});
+    this.route('article', {path: '/:slug'});
+  });
   this.route('implementation');
   this.route('not-found', {path: '/*PATH'});
 });

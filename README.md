@@ -1,4 +1,6 @@
-# sheriff
+# sheriffderek.consulting website
+
+See the `plan.md` document on each commit - to follow along. : )
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
